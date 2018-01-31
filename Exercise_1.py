@@ -25,6 +25,8 @@ IP = ip.split('.')
 
 IP =[int(i) for i in IP]
 
+IP_bin = [f'{z:08b}' for z in IP]
+
 mask = mask.split('/')[1]
 
 mask = int(mask)
@@ -42,10 +44,11 @@ bmask = [int(i,2) for i in bbask] #Decimal representation of bbask
 network = [ ip&mask for ip, mask in zip(IP, bmask)]
 broadcast = [ ip|(255-mask) for ip, mask in zip(IP, bmask)]
 ip_out = str(IP[0]).rjust(7)+' '+str(IP[1]).rjust(8)+' '+str(IP[2]).rjust(8)+' '+str(IP[3]).rjust(8)
+ip_binout = (IP_bin[0].rjust(7))+' '+(IP_bin[1].rjust(8))+' '+(IP_bin[2].rjust(8))+' '+(IP_bin[3].rjust(8))
 bbask_out = str(bbask[0])+' '+str(bbask[1])+' '+str(bbask[2])+' '+str(bbask[3])
 network_out = str(network[0])+'.'+str(network[1])+'.'+str(network[2])+'.'+str(network[3])+'/'+str(mask)
 broadcast_out = str(broadcast[0])+'.'+str(broadcast[1])+'.'+str(broadcast[2])+'.'+str(broadcast[3])+'/'+str(mask)
 print(ip_out)
-print(bbask_out)
+print(ip_binout)
 print('Network address:',network_out)
 print('Broadcast address: ',broadcast_out)

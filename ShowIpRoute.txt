@@ -14,7 +14,7 @@ D - EIGRP, EX - EIGRP external, E1 - OSPF external type 1 route,
 
 E2 - OSPF external type 2 route, N1 - OSPF NSSA external type 1 route,
 
-N2 - OSPF NSSA external type 2 route
+N2 - OSPF NSSA external type 2 route, E - EGP
 
 Gateway of last resort is 10.119.254.240 to network 10.140.0.0
 
@@ -39,3 +39,7 @@ i L2 10.89.67.0 [115/20] via 10.89.64.240, 0:00:12, Ethernet0
 i L2 10.89.66.0 [115/20] via 10.89.64.240, 0:00:12, Ethernet0
 
 H 172.16.99.0 [250/1] via 10.1.1.99, 00:11:43, Tunnel0
+
+EX 192.168.121.0 [250/1] via 10.1.1.99, 00:11:43, Tunnel0
+
+E2 192.168.121.0 [250/1] via 10.1.1.99, 00:11:43, Tunnel0
