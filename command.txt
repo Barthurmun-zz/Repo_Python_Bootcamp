@@ -1,9 +1,12 @@
-switchport trunk allowed vlan 1,3,5,11,25,111,23, 8
-
-switchport trunk allowed vlan 1,11,5,8,111,100,77,75
-
-switchport trunk allowed vlan 5,111,77,88,44,8,112,11,8,1
-
-switchport trunk allowed vlan 8412,123,1452,132,1
-
-switchport mode auto
+int f0/1
+switchport mode trunk
+switchport trunk allowed vlan 1,3,5,11,25,111
+end
+int f0/2
+switchport mode trunk
+switchport trunk allowed vlan 1,11,5,8,111,100
+end
+int f0/3
+switchport mode trunk
+switchport trunk allowed vlan 5,111,77,88,44,8,112
+end
