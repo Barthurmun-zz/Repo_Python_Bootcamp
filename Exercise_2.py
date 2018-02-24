@@ -39,7 +39,7 @@ for key in dic.keys():
     elif dic[key] == counter:
         l_every_time.append(key)
    
-l_only_one.remove('')
+#l_only_one.remove('')
         
 for idx,nr in enumerate(l_only_one):
     l_only_one[idx]=int(l_only_one[idx])

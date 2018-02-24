@@ -50,8 +50,8 @@ Protocol =[i.split(' ') [0] for i in lista]
 Prefix =[i.split(' ') [1] for i in lista]
 AD_METRIC =[i.split(' ') [2] for i in lista]
 Next_Hop =[i.split(' ') [4] for i in lista]
-Time =[i.split(' ') [5] for i in lista]
-Int =[i.split(' ') [6] for i in lista]
+Time =[i.split(' ') [6] for i in lista]
+Int =[i.split(' ') [7] for i in lista]
 
 
 for nr in range(0,counter):
